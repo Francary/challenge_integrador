@@ -108,6 +108,16 @@ li article a:link , li article a:visited , li article a:active{
     margin: 5px;
 }
 
+.cuotas-sin-interes {
+    color: #1D84B5;
+    font-weight: bold;
+}
+.button-rojo {
+    background-color: #FF3333;
+    padding: 5px;
+    color: white    ;
+    text-decoration: none;
+}
 /*---- Clases de Shop ---- */
 
 .container-shop {
@@ -121,3 +131,12 @@ li article a:link , li article a:visited , li article a:active{
 .filtrar-precio{
     display:flex;
 }
+
+/*---- Clases de Login ---- */
+
+.form-login {
+    display: flex;
+    
+    justify-content: center;
+}
+
