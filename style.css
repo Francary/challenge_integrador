@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+}
+nav{
+    background-color: #30343F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+footer{
+    background-color: #30343F;
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+    margin: 25px;
+}
+
+section{
+    display: flex;
+}
+ul{
+    display: flex;
+}
+
+
+
+article{
+    margin: 25px;
+}
+
+
+.icon-funko {
+    width: 300px;
+    height: 300px;
+}
+
+.icon-cart {
+    width: 32px;
+    height: 32px;
+}
+
+.logo-funko {
+    margin-left: 50px;
+    width: 280px;
+}
+
+.nuevos-ingresos{
+    background-image:url(./img/funkos-banner.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
