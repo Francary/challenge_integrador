@@ -1,6 +1,8 @@
 body{
     margin: 0px;
-}
+    
+    }
+
 nav{
     background-color: #30343F;
     display: flex;
@@ -8,30 +10,38 @@ nav{
     justify-content: space-between;
     color: white;
 }
+
 footer{
     background-color: #30343F;
-    display: flex;
+    display: block;
+    text-align: center;
+    padding: 5px 0; 
 }
 
 li{
     list-style-type: none;
-    margin: 25px;
 }
 
-section{
-    display: flex;
-}
 ul{
     display: flex;
 }
 
-
-
-article{
-    margin: 25px;
+footer a:link , footer a:visited , footer a:active ,
+nav a:link , nav a:visited , nav a:active 
+{
+    text-decoration: none;
+    color: white;   
+}
+li article a:link , li article a:visited , li article a:active{
+    text-decoration: none;
+    color: black;  
 }
 
 
+
+.link-nav li{
+    margin: 15px;
+}
 .icon-funko {
     width: 300px;
     height: 300px;
@@ -46,10 +56,68 @@ article{
     margin-left: 50px;
     width: 280px;
 }
+.mini-logo-funko{
+    height: 50px;
+    margin-right: 50px;
+}
 
 .nuevos-ingresos{
     background-image:url(./img/funkos-banner.webp) ;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    padding: 50px 0px;
+}
+
+.button-shop {
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 35px 5px 35px;
+    text-decoration: none;
+}
+.main-coleccion {
+    display: flex;
+    margin: 80px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    justify-content: space-between;
+    color: black;
+    
+
+}
+.button-coleccion {
+    background-color: #30343F;
+    border-radius: 25px;
+    padding: 5px 35px 5px 35px;
+    color: white;
+    text-decoration: none;
+      
+}
+.resumen-article {
+    border-bottom: 2px solid #FF3333;
+    padding-bottom: 10px;
+}
+
+.derechos-reserved {
+    color:white;
+}
+.link-footer {
+    display:block;
+}
+.link-footer li{
+    margin: 5px;
+}
+
+/*---- Clases de Shop ---- */
+
+.container-shop {
+    display: flex;
+    margin: 80px;
+}
+.filtrar-shop {
+    display: block;
+}
+
+.filtrar-precio{
+    display:flex;
 }
