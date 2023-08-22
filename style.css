@@ -1,6 +1,5 @@
 body{
     margin: 0px;
-    
     }
 
 nav{
@@ -61,13 +60,17 @@ li article a:link , li article a:visited , li article a:active{
     margin-right: 50px;
 }
 
-.nuevos-ingresos{
+.cointainer-nuevos-ingresos{
     background-image:url(./img/funkos-banner.webp) ;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     padding: 50px 0px;
 }
+.nuevos-ingresos{
+    margin-left: 80px;
+}
+
 
 .button-shop {
     background-color: white;
@@ -78,12 +81,8 @@ li article a:link , li article a:visited , li article a:active{
 .main-coleccion {
     display: flex;
     margin: 80px;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
     justify-content: space-between;
     color: black;
-    
-
 }
 .button-coleccion {
     background-color: #30343F;
@@ -94,7 +93,7 @@ li article a:link , li article a:visited , li article a:active{
       
 }
 .resumen-article {
-    border-bottom: 2px solid #FF3333;
+    border-bottom: 3px solid #FF3333;
     padding-bottom: 10px;
 }
 
@@ -138,4 +137,30 @@ li article a:link , li article a:visited , li article a:active{
     display: flex;
     
     justify-content: center;
+}
+
+/*---- Clases de Cart ----*/
+.icon-funko-mini {
+    width: 118px;
+    height: 118px;
+}
+.container-cart {
+    display: flex;
+    background-color: #FAFAFF;
+    border-radius: 25px;
+    margin: 25px 80px;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-cart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen-cart{
+    margin: 25px 80px 25px 0px;
+    background-color: #FAFAFF;
+    border-radius: 25px;
+    padding: 50px;
 }
