@@ -117,6 +117,13 @@ li article a:link , li article a:visited , li article a:active{
     color: white    ;
     text-decoration: none;
 }
+.detalle-coleccion{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
 /*---- Clases de Shop ---- */
 
 .container-shop {
