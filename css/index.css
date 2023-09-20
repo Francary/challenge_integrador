@@ -94,8 +94,9 @@ img{
     margin: 0 auto;
 }
 
-
-
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
 
 /* HEADER */
 
@@ -439,6 +440,11 @@ footer{
     color: var(--secondary-solid);
     font-weight: 700;
 }
+.item__article__input{
+    border-radius: 6px;
+    padding: var(--spacing-8);
+}
+
 
 /* ANIMATIONS*/
 @keyframes fade {
