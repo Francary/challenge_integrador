@@ -456,6 +456,7 @@ footer{
     font-weight: 700;
     border-bottom: var(--primary-solid)  solid 5px;
     margin: var(--spacing-68) auto;
+    display: inline-block;
 }
 
 .cart__header{
@@ -526,10 +527,10 @@ footer{
     font-family: var(--alternative-font);
     font-size: var(--font-display);
     font-weight: 700;
-    text-align: end;
     margin: var(--spacing-16) auto;
     border-bottom: solid var(--primary-900) 5px;
     padding: var(--spacing-8);
+    display: inline-block;
 }
 
 .cart__resumen__container{
@@ -553,17 +554,20 @@ footer{
     font-size: var(--font-small);
     font-weight: 700 ;
     color: #747474;
+    text-align: end;
 }
 .cart__resumen__total{
     font-size: var(--font-large);
     font-weight: 700;
     border-top: solid var(--primary-900) 2px;
+    
 }
 .cart__resumen__total-amount{
     font-size: var(--font-large);
     font-weight: 700 ;
     color: #747474;
     border-top: solid var(--primary-900) 2px;
+    text-align: end;
 }
 
 .button__pay{
