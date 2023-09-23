@@ -582,6 +582,56 @@ footer{
 
 }
 
+
+/* CSS OF LOGIG*/
+.login__container {
+    display: flex; /* Utilizamos flexbox para centrar contenido */
+   flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 50vh; /* Esto asegura que el contenedor ocupe toda la altura de la ventana */
+  }
+  
+.login__title{
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 700;
+    text-align: right;
+    margin: var(--spacing-24) auto;
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    
+}
+
+.login__sub-title{
+    font-size: var(--font-large);
+    text-align: right;
+}
+
+.login__input{
+    padding: var(--spacing-8);
+    border: none;
+    border-bottom: solid 2px var(--primary-900);
+}
+
+.login__ingresar{
+    font-size: var(--font-xsmall);
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    padding: var(--spacing-10);
+}
+.login__recordar{
+    font-size: var(--font-medium);
+    color: var(--dark-solid);
+}
+
+.login__recuperar-contraseña{
+    font-size: var(--font-small);
+    color: var(--secondary-solid);
+}
 /* ANIMATIONS*/
 @keyframes fade {
     0% {

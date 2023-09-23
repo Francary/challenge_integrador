@@ -3,71 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../css/index.css">
     <title>Login | Funkoshop</title>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../index.html">
-                <img class="logo-funko" src="../img/branding/logo_light_horizontal.svg" alt="Logo Marca Funkoshop">
-            </a>
-            <ul class="link-nav">
-                <li>
-                    <a href="./shop.html">SHOP</a>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="./index.html">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Marca Funkoshop">
+                </a>
+            </picture>           
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop.html">VER TIENDA </a>
                 </li>
-                <li>
-                    <a href="./contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./cart.html">
-                        <img class="icon-cart" src="../img/icons/cart-icon.svg" alt="icono de carrito">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/cart.html">
+                        <img class="icon-cart" src="../../img/icons/cart-icon.svg" alt="icono de carrito">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-        <main class="form-login" >
-            <section >
-                <h1>INGRESAR A MI CUENTA</h1>
-                <form action="">
+        <main class="login__container container" >
+            
+                <h1 class="login__title">INGRESAR A MI CUENTA</h1>
+                <form class="login__form" action="">
                     <div>
-                        <label for="email">Email:</label>
-                        <input type="email" name="" id="">
+                        <label class="login__sub-title" for="email">Email:</label>
+                        <input  class="login__input" type="email" name="" id="" placeholder="tumail@mail.com">
                     </div>
                     <div>
-                        <label for="password">Contraseña</label>
-                        <input type="password">
+                        <label class="login__sub-title" for="password">Contraseña:</label>
+                        <input class="login__input" type="password" placeholder="password">
                     </div>    
-
-
-                    <a class="button-rojo" href="">Ingresar</a>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Recordarme</label>
-                    <p>Olvidé mi contraseña</p>
+                    <div>
+                        <a class="login__ingresar" href="">Ingresar</a>
+                        <input type="checkbox" name="" id="">
+                        <label class="login__recordar" for="">Recordarme</label>
+                    </div>
+                    <div>
+                        <p class="login__recuperar-contraseña" href="">Olvidé mi contraseña</p>
+                    </div>                   
                 </form>
 
 
-            </section>
+         
         </main>
     </div>
         
-    <footer>        
-        <nav>
-            <ul class="link-footer">
-                <li><a href="./shop.html">SHOP</a></li>
-                <li><a href="./register.html">REGISTRARSE</a></li>
-                <li><a href="./login.html">LOGIN</a></li>
-                <li><a href="./contact.html">CONTACTO</a></li>
+    <footer class="footer"><!-- INICIO FOOTER -->
+    
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="./pages/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/register.html">REGISTRARSE</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/login.html">LOGIN</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/contact.html">CONTACTO</a></li>
             </ul>
-            <a  href="../index.html">
-                <img class="mini-logo-funko" src="../img/branding/isotype.svg" alt="">
-            </a>
+            <picture>
+                <a  href="./index.html">
+                    <img class="mini-logo-funko" src="../../img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
         </nav>
-        <P class="derechos-reserved">All rights reserved 2023 - Funkoshop &copy;</P>
-    </footer>   
+        <P class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</P>
+      
+    </footer><!-- FIN FOOTER -->     
 </body>
 </html>
