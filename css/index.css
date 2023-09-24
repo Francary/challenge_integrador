@@ -583,7 +583,7 @@ footer{
 }
 
 
-/* CSS OF LOGIG*/
+/* CSS OF LOGIG and REGISTER*/
 .login__container {
     display: flex; 
     flex-direction: column;
@@ -602,13 +602,19 @@ footer{
     font-size: var(--font-display);
     font-weight: 700;
     text-align: right;
-    margin: var(--spacing-24) auto;
+    margin: var(--spacing-12) auto;
+}
+.login__message{
+    font-family: var(--alternative-font);
+    font-size: var(--font-xlarge);
+    font-weight: 500;
+    text-align: right;
 }
 .login__container__input{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: flex-start ;
-    margin: var(--spacing-10) auto;
+    margin: var(--spacing-12) auto;
 }
 
 .login__sub-title{
