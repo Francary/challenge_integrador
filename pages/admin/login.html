@@ -27,24 +27,26 @@
             </ul>
         </nav>
     </header>
-        <main class="login__container container" >
-            
-                <h1 class="login__title">INGRESAR A MI CUENTA</h1>
+        <main class="login__container container" >            
                 <form class="login__form" action="">
+                    <h1 class="login__title">INGRESAR A MI CUENTA</h1>
                     <div>
-                        <label class="login__sub-title" for="email">Email:</label>
-                        <input  class="login__input" type="email" name="" id="" placeholder="tumail@mail.com">
-                    </div>
-                    <div>
-                        <label class="login__sub-title" for="password">Contraseña:</label>
-                        <input class="login__input" type="password" placeholder="password">
+                        <div class="login__container__input">
+                            <label class="login__sub-title" for="email">Email:</label>
+                            <input  class="login__input" type="email" name="" id="" placeholder="tumail@mail.com">
+                        </div>
+                        <div class="login__container__input">
+                            <label class="login__sub-title" for="password">Contraseña:</label>
+                            <input class="login__input" type="password" placeholder="password">
+                        </div>                        
                     </div>    
                     <div>
-                        <a class="login__ingresar" href="">Ingresar</a>
-                        <input type="checkbox" name="" id="">
-                        <label class="login__recordar" for="">Recordarme</label>
-                    </div>
-                    <div>
+                        <div class="login__container_options">
+                            <a class="login__ingresar" href="">Ingresar</a>
+                            <input type="checkbox" name="" id="">
+                            <label class="login__recordar" for="">Recordarme</label>
+                            
+                        </div>
                         <p class="login__recuperar-contraseña" href="">Olvidé mi contraseña</p>
                     </div>                   
                 </form>
