@@ -585,11 +585,11 @@ footer{
 
 /* CSS OF LOGIG*/
 .login__container {
-    display: flex; /* Utilizamos flexbox para centrar contenido */
-   flex-direction: column;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 50vh; /* Esto asegura que el contenedor ocupe toda la altura de la ventana */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 50vh; 
   }
   
 .login__title{
