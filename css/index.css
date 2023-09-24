@@ -101,6 +101,15 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
+.delete_trash{
+    max-width: 28px ;
+}
+.edit_pencil{
+    max-width: 28px
+}
+.search_icon{
+    max-width: 30px;
+}
 /* HEADER */
 
 header{
@@ -486,9 +495,7 @@ footer{
     box-shadow: 0px 0px 10px 0px #00000040; 
 }
 
-.delete_trash{
-    max-width: 28px ;
-}
+
 .img__funkos{
     max-width: 118px;
 }
@@ -650,6 +657,44 @@ footer{
     text-align: center;
     margin: var(--spacing-10)auto;
 }
+
+/* CSS OF ADMIN*/
+.admin__search{
+    display: flex;
+    gap: var(--spacing-20);
+    margin: var(--spacing-36) auto;
+}
+.admin__search__input{
+    border: solid 2px var(--dark-bg-solid);
+    border-radius: var(--spacing-6);
+    min-width: 50%;
+    padding: var(--spacing-10);
+}
+.admin__list__title{
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 700;
+}
+.admin__list__container{
+    margin-left: var(--spacing-20);
+}
+.admin__list__detail{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 2fr 1fr 0.2fr 0.2fr;
+}
+.admin__list__detail-title{
+    font-size: var(--font-xsmall);
+    font-weight: 700;
+    margin: var(--spacing-16) auto;
+}
+.admin__list__detail-item{
+    font-size: var(--font-xsmall);
+    font-weight: 500;
+    margin: var(--spacing-16) auto;  
+}
+
+
+
 /* ANIMATIONS*/
 @keyframes fade {
     0% {
