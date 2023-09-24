@@ -670,13 +670,37 @@ footer{
     min-width: 50%;
     padding: var(--spacing-10);
 }
+.admin__container{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.admin__add{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: var(--spacing-20);
+}
+.admin__add__text{
+    font-size: var(--font-large);
+    font-weight: 700;
+    color: var(--dark-solid);
+}
+.admin__add__button{
+    font-size: var(--font-xlarge) ;
+    background-color: var(--primary-900);
+    color: var(--light-font-solid);
+    border-radius: var(--spacing-6);
+    border: none;
+    height: 39px;
+    width: 39px;
+}
 .admin__list__title{
     font-family: var(--alternative-font);
     font-size: var(--font-display);
     font-weight: 700;
 }
 .admin__list__container{
-    margin-left: var(--spacing-20);
+    margin: var(--spacing-36) auto var(--spacing-68) var(--spacing-20);
 }
 .admin__list__detail{
     display: grid;
