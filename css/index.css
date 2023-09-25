@@ -717,7 +717,7 @@ footer{
     margin: var(--spacing-16) auto;  
 }
 
-/*CSS OF CREATE*/
+/*CSS OF CREATE AND EDIT*/
 
 .create__form{
     display: flex;
@@ -769,6 +769,13 @@ footer{
     border-radius: var(--spacing-6);
     border: solid var(--dark-bg-solid) 2px;
     min-width: 23%;
+}
+
+.create__form__select-img{
+    padding: var(--spacing-8);
+    border-radius: var(--spacing-6);
+    border: solid var(--dark-bg-solid) 2px;
+  
 }
 /* ANIMATIONS*/
 @keyframes fade {
