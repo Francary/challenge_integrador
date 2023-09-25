@@ -745,7 +745,19 @@ footer{
     min-height: 15vmax;
     min-width: 65%;
 }
-
+.create__form__button-container{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+.create__form__button{
+    font-size: var(--font-xsmall);
+    font-weight: 600;
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    border: none;
+    padding: var(--spacing-10) ;
+    margin: var(--spacing-10);
+}
 
 /* ANIMATIONS*/
 @keyframes fade {
