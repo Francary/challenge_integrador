@@ -530,14 +530,17 @@ footer{
     grid-template-columns: repeat(2,2fr);
 }
 
+.cart__resumen__container-title{
+    display: flex;
+    justify-content: right;
+    margin: var(--spacing-24) auto;
+}
 .cart__resumen__title{
     font-family: var(--alternative-font);
     font-size: var(--font-display);
     font-weight: 700;
-    margin: var(--spacing-16) auto;
     border-bottom: solid var(--primary-900) 5px;
     padding: var(--spacing-8);
-    display: inline-block;
 }
 
 .cart__resumen__container{
