@@ -776,6 +776,22 @@ footer{
     border-radius: var(--spacing-6);
     border: solid var(--dark-bg-solid) 2px;
   }
+.edit__form__container-img{
+    display: flex;
+    text-align: center;
+    gap:  var(--spacing-36);
+
+}
+.edit__form__img{
+    max-width: 150px;
+    border-bottom: solid var(--primary-900) 2px;
+}
+.edit__form__text{
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    font-weight: 500;
+}
+
 /* ANIMATIONS*/
 @keyframes fade {
     0% {
