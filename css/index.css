@@ -805,7 +805,55 @@ footer{
     font-size: var(--font-medium);
     font-weight: 500;
 }
+/* CSS OF CONTACT */
+.contact__container{
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-36) auto;
+    gap: var(--spacing-20);
+}
+.contact__data{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 2fr;
+    margin: var(--spacing-20) auto;
+    justify-items: center;
+  
 
+    /* display: flex;
+    gap: var(--spacing-20);
+    margin: var(--spacing-20) auto; */
+   
+    
+}
+.contact__title{
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 700;   
+}
+.contact__message{
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    font-weight: 500;
+}
+.contact__sub-title{
+    font-size: var(--font-large);
+}
+
+.contact__input{
+    padding: var(--spacing-8);
+    border: none;
+    border-bottom: solid 2px var(--primary-900);
+}
+.contact__submit{
+    font-size: var(--font-xsmall);
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    padding: var(--spacing-10);
+}
+.contact__textarea{    
+    min-height: 15vmax;
+    min-width: 70%;
+}
 /* ANIMATIONS*/
 @keyframes fade {
     0% {
