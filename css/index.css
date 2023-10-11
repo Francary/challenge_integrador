@@ -32,6 +32,8 @@
     --dark-300: rgb(31, 31, 31,0.3);
 
     --dark-bg-solid : #30343F;
+    --dark-bg-solid-900 : rgb(48, 52, 63, 0.9);
+
     --light-bg-solid: #FAFAFF; 
     --light-font-solid:#FFFFFF;
 
@@ -468,11 +470,13 @@ footer{
     font-weight: 400;
 }
 .item__article__add-cart{
+    border: none;
     font-size: var(--font-medium);
     color: var(--light-font-solid);
     font-weight: 400;
     background-color: var(--primary-900);
     padding: var(--spacing-8);
+    cursor: pointer;
 }
 .item__article__promo{
     font-size: var(--font-xsmall);
@@ -480,9 +484,26 @@ footer{
     font-weight: 700;
 }
 .item__article__input{
-    border-radius: var(--spacing-6);
+    border: 0.5px solid ;
+    text-align: center;
+    max-width: 105px;
     padding: var(--spacing-8);
 }
+.item__quantity {
+    background-color: var(--dark-bg-solid-900);
+    color: var(--light-font-solid);
+    font-size: var(--font-medium);
+    cursor: pointer;
+    border: none;
+    padding: var(--spacing-8) var(--spacing-16);
+   
+}
+
+.item__cart {
+    display: flex;
+    gap: var(--spacing-16);
+}
+
 
 /* CSS OF CART*/
 
