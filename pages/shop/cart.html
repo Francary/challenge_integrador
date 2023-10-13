@@ -63,7 +63,9 @@
                 </div>
             </div>
             <div>
-                <input class="cart__item__input" type="number" id="cantidad" name="cantidad" min="1" max="100" step="1" value="1" autofocus required>
+                <button id="subtract" class="item__quantity" type="button" >-</button>
+                <input class="cart__item__input" type="text" id="quantity" name="quantity" value="1" autofocus required>
+                <button id="add" class="item__quantity" type="button">+</button>
             </div>
             <div>
                 <p>$ 3599,98</p>
@@ -144,6 +146,7 @@
         <P class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</P>
       
     </footer><!-- FIN FOOTER -->   
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>       
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>   
+    <script src="../../js/item.js"></script>    
 </body>
 </html>
