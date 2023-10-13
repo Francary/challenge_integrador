@@ -309,11 +309,6 @@ header{
 .glide__arrow--right{
     right:  0;
 }
-/* No es necesario al usar libreria https://glidejs.com
-    .slider__items {
-    display: flex;
-    gap: var(--spacing-24);
-} */
 
 .card-item__cover{
     display: flex;
@@ -425,6 +420,11 @@ footer{
     gap: var(--spacing-8);
 }
 
+/* No es necesario al usar libreria https://glidejs.com */
+.slider__items {
+    display: flex;
+    gap: var(--spacing-24);
+}
 /* CSS OF ITEM*/
 
 .item__container{
@@ -639,6 +639,8 @@ footer{
     padding: var(--spacing-10);
     text-align: center;
     margin: var(--spacing-36) auto;
+    border: none;
+    cursor: pointer;
 
 }
 
@@ -746,6 +748,7 @@ footer{
     border: none;
     height: 39px;
     width: 39px;
+    cursor: pointer;
 }
 .admin__list__title{
     font-family: var(--alternative-font);
@@ -815,6 +818,7 @@ footer{
     border: none;
     padding: var(--spacing-10) ;
     margin: var(--spacing-10);
+    cursor: pointer;
 }
 
 .create__form__select{
