@@ -567,14 +567,32 @@ footer{
     font-weight: 400;
     color: var(--dark-bg-solid);
 }
-
+.container__quantity{
+    display: flex;
+    gap: var(--spacing-10);
+}
 .cart__item__input{
-    padding: var(--spacing-8);
-    border-radius: var(--spacing-6);
+    border: 0.5px solid ;
     text-align: center;
-    max-width: 100px;
+    max-width: 105px;
+    padding: var(--spacing-8);
+}
+.cart__item__quantity {
+    width: var(--spacing-20);
+    height: var(--spacing-20);   
+    background-color: var(--primary-900);
+    color: var(--light-font-solid);
+    font-size: var(--font-medium);
+    cursor: pointer;
+    border: none;    
 }
 
+
+.container__button{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
 .cart__resumen{
     display: grid;
     grid-template-columns: repeat(2,2fr);
@@ -643,7 +661,6 @@ footer{
     cursor: pointer;
 
 }
-
 
 /* CSS OF LOGIG and REGISTER*/
 .login__container {
