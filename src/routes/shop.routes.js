@@ -1,11 +1,12 @@
 import { Router } from "express";
+import { shopController } from "../Controllers/shop.controller.js";
 
 const shopRouter = Router();
-shopRouter.get("/", ( req, res ) => res.send(" Route for Shop View") );
-shopRouter.get("/item/:id", ( req, res ) => res.send(" Route for Shop View for ID") );
-shopRouter.post("/item/:id/add", ( req, res ) => res.send("Route for Shop View for ID for ADD ") );
-shopRouter.get("/cart", ( req, res ) => res.send(" Route for Shop Cart View") );
-shopRouter.post("/cart", ( req, res ) => res.send(" Route for Shop View") );
+shopRouter.get("/", shopController.shop );
+shopRouter.get("/item/:id",  shopController.itemGet);
+shopRouter.post("/item/:id/add", shopController.itemPost );
+shopRouter.get("/cart",  shopController.cartGet);
+shopRouter.post("/cart", shopController.cartPost);
 
 
 export{shopRouter}

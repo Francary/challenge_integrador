@@ -1,11 +1,13 @@
 import { Router } from "express";
+import { mainController } from "../Controllers/main.controller.js";
+
 
 const mainRouter = Router();
 
-mainRouter.get("/home", ( req, res ) => res.send(" Route for Home View") );
-mainRouter.get("/contact", ( req, res ) => res.send(" Route for Contact View") );
-mainRouter.get("/about", ( req, res ) => res.send(" Route for About View") );
-mainRouter.get("/faqs", ( req, res ) => res.send(" Route for Faqs View") );
+mainRouter.get("/home", mainController.home );
+mainRouter.get("/contact", mainController.contact  );
+mainRouter.get("/about", mainController.about);
+mainRouter.get("/faqs", mainController.faqs );
 
 
 
