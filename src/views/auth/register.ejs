@@ -7,26 +7,7 @@
     <title>Registrarse | Funkoshop</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Marca Funkoshop">
-                </a>
-            </picture>           
-            <ul class="navbar__menu">
-                <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="../../index.html">VER TIENDA </a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="./admin.html">ADMIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../index.html">SALIR</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('../partials/header2') %>
     <main  class="login__container container" >
         <form class="login__form" action="">
             <h1 class="login__title">CREA TU CUENTA</h1>
@@ -64,23 +45,6 @@
             </div>                   
         </form>
     </main>
-    <footer class="footer"><!-- INICIO FOOTER -->
-    
-        <nav class="navbar container">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">SHOP</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./register.html">REGISTRARSE</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./login.html">LOGIN</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <a  href="../../index.html">
-                    <img class="mini-logo-funko" src="../../img/branding/isotype.svg" alt="">
-                </a>
-            </picture>
-        </nav>
-        <P class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</P>
-      
-    </footer><!-- FIN FOOTER -->    
+    <%- include('../partials/footer')%>  
 </body>
 </html>

@@ -4,32 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/index.css">
-    <title>Create | Funkoshop</title>
+    <title>EDIT | Funkoshop</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Marca Funkoshop">
-                </a>
-            </picture>           
-            <ul class="navbar__menu">
-                <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="../../index.html">VER TIENDA </a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="./admin.html">ADMIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../index.html">SALIR</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('../partials/header2') %>
     <main class="container">
         <form class="create__form" action="">
-            <h1 class="create__form__title">CREAR NUEVO ITEM</h1>
+            <h1 class="create__form__title">EDITAR ITEM</h1>
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">Categoria:</label>
                 <select class="create__form__select" name="" id=""></select>
@@ -61,33 +42,21 @@
                 <label class="create__form__sub-title" for="">Imágenes:</label>
                 <input class="create__form__select-img" name="Elegir archivos" type="file">
             </div>
-            <div class="create__form__button-container">
-                <button class="create__form__button" type="submit"> Agregar Producto </button>
-                <button class="create__form__button"type="reset">Limpiar</button>
+            <div class="edit__form__container-img">
+                <div>
+                    <img class="edit__form__img" src="../../img/pokemon/pikachu-1.webp" alt="">
+                    <p class="edit__form__text">Frente</p>
+                </div>
+                <div>
+                    <img class="edit__form__img" src="../../img/pokemon/pikachu-box.webp" alt="">
+                    <p class="edit__form__text">Dorso</p>
+                </div>
             </div>
-            
-
-        </form>
-
-        
+            <div class="create__form__button-container">
+                <button class="create__form__button" type="submit"> Modificar Producto </button>
+            </div>
+        </form>   
     </main>
-    <footer class="footer"><!-- INICIO FOOTER -->
-    
-        <nav class="navbar container">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">SHOP</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./register.html">REGISTRARSE</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./login.html">LOGIN</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../shop/contact.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <a  href="../../index.html">
-                    <img class="mini-logo-funko" src="../../img/branding/isotype.svg" alt="">
-                </a>
-            </picture>
-        </nav>
-        <P class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</P>
-      
-    </footer><!-- FIN FOOTER -->    
+    <%- include('../partials/footer')%>
 </body>
 </html>
