@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { mainController } from "../Controllers/main.controller.js";
+const { Router } = require ("express");
+const  {mainController}  = require ("../Controllers/main.controller.js");
 
 
 const mainRouter = Router();
@@ -11,4 +11,4 @@ mainRouter.get("/faqs", mainController.faqs );
 
 
 
-export {mainRouter}
+module.exports = mainRouter

@@ -1,5 +1,6 @@
-import { Router } from "express";
-import { authController } from "../Controllers/auth.controller.js";
+const { Router } = require ("express");
+
+const { authController } = require ("../Controllers/auth.controller.js");
 
 const authRouter = Router();
 
@@ -11,4 +12,4 @@ authRouter.get("/logout",   authController.logout);
 
 
 
-export {authRouter}
+module.exports = authRouter

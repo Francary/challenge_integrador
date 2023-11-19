@@ -1,9 +1,9 @@
 const shopController = {
-    shop:       ( req, res ) => res.send(" Route for Shop View"),
-    itemGet:    ( req, res ) => res.send(" Route for Shop View for ID"),
+    shop:       ( req, res ) => res.render('./shop/shop'),
+    itemGet:    ( req, res ) => res.render('./shop/item'),
     itemPost:   ( req, res ) => res.send(" Route for Shop View for ID for ADD "),
-    cartGet:    ( req, res ) => res.send(" Route for Shop Cart GET View"),
+    cartGet:    ( req, res ) => res.render('./shop/cart'),
     cartPost:   ( req, res ) => res.send(" Route for Shop Cart POST View"),
 }
 
-export{shopController}
+module.exports = {shopController}
