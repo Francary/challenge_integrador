@@ -285,8 +285,8 @@ header{
 /* SLIDER*/
 
 .slider{
-    display: flex;
-    flex-direction: column;
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-36);
     margin: var(--spacing-68) auto;
 }
