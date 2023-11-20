@@ -7,7 +7,7 @@ add.forEach((add, index) => {
         quantity[index].value = Number(quantity[index].value) + 1;
     });
 });
-console.log(add)
+
 subtract.forEach((subtract, index) => {
     subtract.addEventListener('click', () => {
         if (Number(quantity[index].value) > 1) {

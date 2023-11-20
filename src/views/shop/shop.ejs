@@ -7,70 +7,70 @@
     <title>Shop | Funkoshop</title>
 </head>
 <body>
-    <%- include('../partials/header') %>
-        <div class="container-shop container">	
-        <aside class="aside__container">
-            <div>
-                <p class="filter__title">BUSCAR</p>
-                <input class="filter__input__search" type="search" name="BUSCADOR" id="" placeholder="item o categoria">
-            </div>
-            <div>
-                <p class="filter__title">ORDENAR POR</p>
-                <select class="filter__input__select" name="" id="" placeholder="Mayor a menor"></select>
-            </div>     
-            <div>
-                <p class="filter__title">PRECIO</p>
-                <div class="filter__price__container">
-                    <p class="filter__text">MIN:</p> <input class="filter__input" type="number" min="1" max="100">              
-                    <p class="filter__text">MAX:</p> <input class="filter__input" type="number" min="1" max="100">
-                </div>                       
-            </div>
-            <div>
-                <p class="filter__title">FILTRAR</p>
-                <div class="filter__filter">
-                    <div class="filter__filter__checkbox">
-                        <input  type="checkbox" name="NUEVOS" id="">
-                        <p class="filter__text">NUEVOS</p> 
-                    </div>
-                    <div class="filter__filter__checkbox">
-                        <input  type="checkbox" name="OFERTAS" id="">
-                        <p class="filter__text">OFERTAS</p> 
-                    </div>
-                    <div class="filter__filter__checkbox">
-                        <input  type="checkbox" name="EDICIÓN ESPECIAL" id="">
-                        <p class="filter__text">EDICIÓN ESPECIAL</p> 
-                    </div>
-                    <div class="filter__filter__checkbox">
-                        <input  type="checkbox" name="FAVORITOS" id="">
-                        <p class="filter__text">FAVORITOS</p> 
-                    </div>
-                </div>
-            </div>
+	<%- include('../partials/header') %>
+		<div class="container-shop container">	
+			<aside class="aside__container">
+				<div>
+					<p class="filter__title">BUSCAR</p>
+					<input class="filter__input__search" type="search" name="BUSCADOR" id="" placeholder="item o categoria">
+				</div>
+				<div>
+					<p class="filter__title">ORDENAR POR</p>
+					<select class="filter__input__select" name="" id="" placeholder="Mayor a menor"></select>
+				</div>     
+				<div>
+					<p class="filter__title">PRECIO</p>
+					<div class="filter__price__container">
+						<p class="filter__text">MIN:</p> <input class="filter__input" type="number" min="1" max="100">              
+						<p class="filter__text">MAX:</p> <input class="filter__input" type="number" min="1" max="100">
+					</div>                       
+				</div>
+				<div>
+						<p class="filter__title">FILTRAR</p>
+						<div class="filter__filter">
+								<div class="filter__filter__checkbox">
+										<input  type="checkbox" name="NUEVOS" id="">
+										<p class="filter__text">NUEVOS</p> 
+								</div>
+								<div class="filter__filter__checkbox">
+										<input  type="checkbox" name="OFERTAS" id="">
+										<p class="filter__text">OFERTAS</p> 
+								</div>
+								<div class="filter__filter__checkbox">
+										<input  type="checkbox" name="EDICIÓN ESPECIAL" id="">
+										<p class="filter__text">EDICIÓN ESPECIAL</p> 
+								</div>
+								<div class="filter__filter__checkbox">
+										<input  type="checkbox" name="FAVORITOS" id="">
+										<p class="filter__text">FAVORITOS</p> 
+								</div>
+						</div>
+				</div>
 
-        </aside>
-        <main class="main-container">
-            <section class="slider" >
-                <% data.item.forEach(item => { %>
-                    <article>
-                        <a  class="card-item__link" href="">
-                            <picture class="card-item__cover">
-                                <span class="card-item__tag">Nuevo</span>
-                                <img class="card-item__img--front" src="<%= item.img_front %>" alt="">
-                                <img class="card-item__img--back" src="<%= item.img_back %>" alt="">
-                            </picture>
-                            <div class="card-item__content">
-                                <p class="card-item__licence"><%= item.licence_name %></p>
-                                <h4 class="card-item__name"><%= item.product_name %></h4>
-                                <p class="card-item__price"><%= item.product_price %></p>
-                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-                            </div>
-                        </a>  
-                    </article>
-                <% }); %>
-            </section>
-        </main>
-        </div>   
-    <%- include('../partials/footer') %>
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+	</aside>
+		<main class="main-container">
+			<section class="slider" >
+				<% data.item.forEach(item => { %>
+					<article>
+						<a  class="card-item__link" href="">
+							<picture class="card-item__cover">
+								<span class="card-item__tag">Nuevo</span>
+								<img class="card-item__img--front" src="<%= item.img_front %>" alt="">
+								<img class="card-item__img--back" src="<%= item.img_back %>" alt="">
+							</picture>
+							<div class="card-item__content">
+								<p class="card-item__licence"><%= item.licence_name %></p>
+								<h4 class="card-item__name"><%= item.product_name %></h4>
+								<p class="card-item__price"><%= item.product_price %></p>
+								<p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
+							</div>
+						</a>  
+					</article>
+				<% }); %>
+			</section>
+		</main>
+	</div>   
+	<%- include('../partials/footer') %>
+	<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 </html>

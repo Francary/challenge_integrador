@@ -1,6 +1,15 @@
+const fs = require('fs/promises');
+
 const mainController ={
 
-    home:       ( req, res ) =>  res.render('index') ,
+    home:    async   ( req, res ) =>{
+        const jsonContent = await fs.readFile("db.json", 'utf-8');
+        const data = JSON.parse(jsonContent);
+
+        res.render('index', { data }) 
+
+    },
+    
     contact:    ( req, res ) =>  res.render('./shop/contact'),
     about:      ( req, res ) =>  res.send(" Route for About View"),
     faqs:       ( req, res ) =>  res.send(" Route for Faqs View"),
