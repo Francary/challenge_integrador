@@ -1,4 +1,4 @@
 # PROYECTO INTEGRADOR CODO A CODO
 
 
-##### Autor: Francary Molina
+##### Autor: GRUPO 7
