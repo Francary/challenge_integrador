@@ -1,4 +1,4 @@
-const fs = require('fs/promises');
+import fs from 'fs/promises';
 
 const mainController ={
 
@@ -15,4 +15,4 @@ const mainController ={
     faqs:       ( req, res ) =>  res.send(" Route for Faqs View"),
 }
 
-module.exports = {mainController}
+export {mainController}

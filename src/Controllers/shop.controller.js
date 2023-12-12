@@ -1,4 +1,4 @@
-const fs = require('fs/promises'); // Módulo de manejo de archivos para Node.js
+import fs from 'fs/promises'; // Módulo de manejo de archivos para Node.js
 
 
 const shopController = {
@@ -21,4 +21,4 @@ const shopController = {
     cartPost:   ( req, res ) => res.send(" Route for Shop Cart POST View"),
 }
 
-module.exports = {shopController}
+export {shopController}

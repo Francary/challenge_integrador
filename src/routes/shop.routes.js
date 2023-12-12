@@ -1,5 +1,5 @@
-const { Router } = require ("express");
-const { shopController } = require ("../Controllers/shop.controller.js");
+import { Router } from "express";
+import { shopController } from "../Controllers/shop.controller.js";
 
 const shopRouter = Router();
 shopRouter.get("/", shopController.shop );
@@ -9,5 +9,5 @@ shopRouter.get("/cart",  shopController.cartGet);
 shopRouter.post("/cart", shopController.cartPost);
 
 
-module.exports = shopRouter
+export {shopRouter}
 

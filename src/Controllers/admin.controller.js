@@ -7,5 +7,5 @@ const adminController ={
     delete:         ( req, res ) => res.send(" Route for Admin View"),
 };
 
-module.exports = {adminController}
+export  {adminController}
 
