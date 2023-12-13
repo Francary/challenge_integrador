@@ -15,7 +15,15 @@ const shopController = {
 
     } ,
         
-    itemGet:    ( req, res ) => res.render('./shop/item'),
+    itemGet:   async ( req, res ) =>{
+
+        const jsonContent = await fs.readFile("db.json", 'utf-8');
+        const data = JSON.parse(jsonContent);
+        res.render('./shop/item', { data });
+
+    } ,
+
+
     itemPost:   ( req, res ) => res.send(" Route for Shop View for ID for ADD "),
     cartGet:    ( req, res ) => res.render('./shop/cart'),
     cartPost:   ( req, res ) => res.send(" Route for Shop Cart POST View"),
