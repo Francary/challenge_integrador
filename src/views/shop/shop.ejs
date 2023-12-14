@@ -52,7 +52,7 @@
 			<section class="slider" >
 				<% data.item.forEach(item => { %>
 					<article>
-						<a  class="card-item__link" href="">
+						<a  class="card-item__link" href="/shop/item/<%= item.product_id %>">
 							<picture class="card-item__cover">
 								<span class="card-item__tag">Nuevo</span>
 								<img class="card-item__img--front" src="<%= item.img_front %>" alt="">

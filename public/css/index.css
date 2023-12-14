@@ -90,7 +90,10 @@ ul,ol {
 }
 
 p {
-    font-size: 1.8em;
+    font-size: var(--font-medium);
+}
+h2{
+    font-size: var(--font-large) ;
 }
 img{
    width: 100%; 
@@ -920,6 +923,22 @@ footer{
     min-height: 15vmax;
     min-width: 70%;
 }
+
+/* FAQS */
+
+.faqs__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    margin: var(--spacing-36) auto;
+    font-weight: 700;   
+}
+.faqs__container {
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-36) auto;
+    gap: var(--spacing-20);
+}
+
 /* ANIMATIONS*/
 @keyframes fade {
     0% {

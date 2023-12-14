@@ -16,10 +16,11 @@ const shopController = {
     } ,
         
     itemGet:   async ( req, res ) =>{
-
         const jsonContent = await fs.readFile("db.json", 'utf-8');
         const data = JSON.parse(jsonContent);
-        res.render('./shop/item', { data });
+        const itemId = req.params.id
+        const item = data.item.find( item => item.product_id == itemId)
+        res.render('./shop/item', { data , item });
 
     } ,
 

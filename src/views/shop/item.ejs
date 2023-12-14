@@ -11,14 +11,14 @@
     <main>
         <section class="container item__container">
             <picture class="item__cover">
-                <img class="item__img--front" src="../../img/star-wars/baby-yoda-1.webp" alt="Funko Baby Yoga">
-                <img class="item__img--back" src="../../img/star-wars/baby-yoda-box.webp" alt="">
+                <img class="item__img--front" src="<%= item.img_front %>" alt="Funko Baby Yoga">
+                <img class="item__img--back" src="<%= item.img_back %>" alt="">
             </picture>
             <article class="item__article">
-                <p class="item__article__licence">STAR WARS</p>
-                <h1 class="item__article__name">BABY YODA BLUEBALL</h1>
-                <p class="item__article__text"> Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
-                <p class="item__article__price">$ 1799,99</p>
+                <p class="item__article__licence"><%= item.licence_name %></p>
+                <h1 class="item__article__name"><%= item.product_name %></h1>
+                <p class="item__article__text"> <%= item.product_description %></p>
+                <p class="item__article__price"><%= item.roduct_price %></p>
                 <div class="item__cart">
                     <!-- <input class="item__article__input" min="1" type="number" name="" id=""> -->
                     
@@ -41,7 +41,7 @@
 				<ul class="slider__items glide__slides">		
 					<% data.item.forEach(item => { %>
 					<article class="card-item">
-                        <a  class="card-item__link" href="">
+                        <a  class="card-item__link" href="/shop/item/<%= item.product_id %>">
                             <picture class="card-item__cover">
                                 <span class="card-item__tag">Nuevo</span>
                                 <img class="card-item__img--front" src="<%= item.img_front %>" alt="">
