@@ -1,11 +1,10 @@
-import fs from 'fs/promises';
+import { getAll } from '../models/product.model.js';
 
 const mainController ={
 
     home:    async   ( req, res ) =>{
-        const jsonContent = await fs.readFile("db.json", 'utf-8');
-        const data = JSON.parse(jsonContent);
-
+     
+        const data = await getAll()
         res.render('index', { data }) 
 
     },

@@ -11,14 +11,14 @@
     <main>
         <section class="container item__container">
             <picture class="item__cover">
-                <img class="item__img--front" src="<%= item.img_front %>" alt="Funko Baby Yoga">
-                <img class="item__img--back" src="<%= item.img_back %>" alt="">
+                <img class="item__img--front" src="<%= item.image_front %>" alt="Funko Baby Yoga">
+                <img class="item__img--back" src="<%= item.image_back %>" alt="">
             </picture>
             <article class="item__article">
-                <p class="item__article__licence"><%= item.licence_name %></p>
+                <p class="item__article__licence"><%= item.licence_id %></p>
                 <h1 class="item__article__name"><%= item.product_name %></h1>
                 <p class="item__article__text"> <%= item.product_description %></p>
-                <p class="item__article__price"><%= item.roduct_price %></p>
+                <p class="item__article__price"><%= item.price %></p>
                 <div class="item__cart">
                     <!-- <input class="item__article__input" min="1" type="number" name="" id=""> -->
                     
@@ -39,18 +39,18 @@
 			<h2 class="slider__title">PRODUCTOS RELACIONADOS</h2> 
 			<div class="glide__track " data-glide-el="track">
 				<ul class="slider__items glide__slides">		
-					<% data.item.forEach(item => { %>
+					<% data.forEach(item => { %>
 					<article class="card-item">
                         <a  class="card-item__link" href="/shop/item/<%= item.product_id %>">
                             <picture class="card-item__cover">
                                 <span class="card-item__tag">Nuevo</span>
-                                <img class="card-item__img--front" src="<%= item.img_front %>" alt="">
-                                <img class="card-item__img--back" src="<%= item.img_back %>" alt="">
+                                <img class="card-item__img--front" src="<%= item.image_front %>" alt="">
+                                <img class="card-item__img--back" src="<%= item.image_back %>" alt="">
                             </picture>
                             <div class="card-item__content">
-                                <p class="card-item__licence"><%= item.licence_name %></p>
+                                <p class="card-item__licence"><%= item.licence_id %></p>
                                 <h4 class="card-item__name"><%= item.product_name %></h4>
-                                <p class="card-item__price"><%= item.product_price %></p>
+                                <p class="card-item__price"><%= item.price %></p>
                                 <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a> 

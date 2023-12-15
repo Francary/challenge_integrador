@@ -8,8 +8,9 @@ const env = {
     JWT_SECRET: process.env.JWT_SECRET,
 }
 
-const sequelize = new Sequelize('funko','root', '',{
+const sequelize = new Sequelize(process.env.DB_NAME,process.env.DB_USER, process.env.DB_PASSWORD,{
     host: process.env.DB_HOST,
+    port: 3310,  
     dialect: 'mysql'
 })
 

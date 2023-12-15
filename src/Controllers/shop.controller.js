@@ -1,25 +1,26 @@
 import fs from 'fs/promises'; // Módulo de manejo de archivos para Node.js
-
+import { getAll, getOne } from '../models/product.model.js';
 
 const shopController = {
     shop:    async   ( req, res ) =>{
        
-          // Leer el contenido del archivo JSON
-          const jsonContent = await fs.readFile("db.json", 'utf-8');
-    
-          // Parsear el contenido JSON
-          const data = JSON.parse(jsonContent);
-    
-          // Renderizar la vista con los datos (puedes pasar 'data' como variable a la vista)
-          res.render('./shop/shop', { data });
+        // Leer el contenido del archivo JSON
+        //   const jsonContent = await fs.readFile("db.json", 'utf-8');
+        // Parsear el contenido JSON
+        //   const data = JSON.parse(jsonContent);
+
+        const data = await getAll()
+         
+        res.render('./shop/shop', { data });
 
     } ,
         
     itemGet:   async ( req, res ) =>{
-        const jsonContent = await fs.readFile("db.json", 'utf-8');
-        const data = JSON.parse(jsonContent);
+        const data = await getAll()
         const itemId = req.params.id
-        const item = data.item.find( item => item.product_id == itemId)
+        
+        const item = await getOne(itemId)
+        
         res.render('./shop/item', { data , item });
 
     } ,
