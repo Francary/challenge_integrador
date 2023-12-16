@@ -15,11 +15,18 @@
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">Categoria:</label>
                 <select class="create__form__select" name="" id="">
-                    <option value="opcion1">FALTA</option>                
+                <% category.forEach( cate => {%>
+                    <option value="<%= cate.category_id %>"><%= cate.category_name %></option> 
+                <% }); %> 
+                 
+                                  
                 </select>
                 <label class="create__form__sub-title" for="">Licencia:</label>
                 <select class="create__form__select" name="" id="">
-                    <option value="opcion1">FALTA</option>    
+                <% licence.forEach( lice => {%>
+                    <option value="<%= lice.licence_id %>"><%= lice.licence_name %></option> 
+                <% }); %> 
+                  
                 </select>
             </div>
             <div class="create__form__container">
@@ -42,7 +49,11 @@
                 <input class="create__form__input" type="number" min="0" max="100" placeholder="0%" value="<%= item.discount%>">
                 <label class="create__form__sub-title" for="">Cuotas:</label>
                 <select class="create__form__select" name="" id="" aria-placeholder="3 Cuotas sin interés">
-                    <option value="opcion1">FALTA</option>
+                    <option value="opcion1">0</option>
+                    <option value="opcion1">3</option>
+                    <option value="opcion1">6</option>
+                    <option value="opcion1">9</option>
+                    <option value="opcion1">12</option>
                 </select>
             </div>
             <div class="create__form__container">

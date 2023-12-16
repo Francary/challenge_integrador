@@ -17,8 +17,8 @@ const shopController = {
         
     itemGet:   async ( req, res ) =>{
         const data = await getAll()
-        const itemId = req.params.id
         
+        const itemId = req.params.id
         const item = await getOne(itemId)
         
         res.render('./shop/item', { data , item });

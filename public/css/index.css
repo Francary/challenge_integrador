@@ -786,7 +786,7 @@ footer{
 }
 .admin__list__detail{
     display: grid;
-    grid-template-columns: 0.2fr 1fr 2fr 1fr 0.2fr 0.2fr;
+    grid-template-columns: 0.2fr 0.8fr 2.5fr 0.8fr 0.3fr 0.3fr 0.2fr 0.2fr;
 }
 .admin__list__detail-title{
     font-size: var(--font-xsmall);

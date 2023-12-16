@@ -18,7 +18,10 @@
                 <h1 class="admin__list__title">LISTADO DE PRODUCTOS</h1>
                 <div class="admin__add">
                     <p class="admin__add__text" >AGREGAR</p>
-                    <button class="admin__add__button">+</button>
+                    <a href="/admin/create">
+                        <button class="admin__add__button">+</button>
+
+                    </a>
                 </div>
 
             </div>
@@ -30,7 +33,7 @@
                     <p>Código</p>
                     <p>Nombre del Producto</p>
                     <p>Categoria</p>
-                    <p></p>
+                    <p>Imagenes</p>
                     <p></p>
                 </div>
                 <% data.forEach(item => { %>
@@ -40,8 +43,8 @@
                         <p><%= item.sku %></p>
                         <p><%= item.product_name %></p>
                         <p><%= item.category_name %></p>
-                        <!-- <img class="edit_pencil" src="<%= item.image_front %>" alt="">
-                        <img class="delete_trash" src="<%= item.image_back %>" alt=""> -->
+                        <img class="img__mini" src="<%= item.image_front %>" alt="">
+                        <img class="img__mini" src="<%= item.image_back %>" alt="">
                         <a href="/admin/edit/<%= item.product_id %>"> <img class="edit_pencil" src="/img/icons/edit_pencil.svg" alt=""></a>
                         <img class="delete_trash" src="/img/icons/delete_trash.svg" alt="">
                     </div>

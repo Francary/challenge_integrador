@@ -1,3 +1,5 @@
+import { getAllCategory } from "../models/category.model.js";
+import { getAllLicence } from "../models/licence.model.js";
 import { getAll, getOne } from "../models/product.model.js";  
 
 const adminController ={
@@ -6,15 +8,29 @@ const adminController ={
 
         res.render("./admin/admin" , {data} ) },
 
-    createGet:      ( req, res ) => res.render("./admin/create") ,
+    createGet:  async    ( req, res ) =>{
+        const category = await getAllCategory()
+        const licence = await getAllLicence()
+        res.render("./admin/create" , { category, licence} )
 
-    createPost:     ( req, res ) => res.send(" Route for Admin Create POST View") ,
+    },
+    
+
+    createPost:     ( req, res ) =>{
+
+        
+        res.send(" Route for Admin Create POST View")
+
+
+    }, 
+     
 
     editGet: async        ( req, res ) => {
-       
+        const category = await getAllCategory()
+        const licence = await getAllLicence()
         const itemId = req.params.id
         const item =  await getOne(itemId)
-        res.render("./admin/edit", { item } )
+        res.render("./admin/edit", { category, licence, item } )
     },
 
     editPut:        ( req, res ) => res.send(" Route for Admin Edit ID PUT View"),
