@@ -9,12 +9,12 @@
 <body>
     <%- include('../partials/header2') %>
     <main class="container">
-        <form class="create__form" action="">
+        <form class="create__form" action="/admin/edit/<%= item.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h1 class="create__form__title">EDITAR ITEM</h1>
             
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">Categoria:</label>
-                <select class="create__form__select" name="" id="">
+                <select class="create__form__select" name="category" id="">
                 <% category.forEach( cate => {%>
                     <option value="<%= cate.category_id %>"><%= cate.category_name %></option> 
                 <% }); %> 
@@ -22,43 +22,43 @@
                                   
                 </select>
                 <label class="create__form__sub-title" for="">Licencia:</label>
-                <select class="create__form__select" name="" id="">
+                <select class="create__form__select" name="licence" id="">
                 <% licence.forEach( lice => {%>
-                    <option value="<%= lice.licence_id %>"><%= lice.licence_name %></option> 
+                    <option value="<%= lice.licence_id %>" ><%= lice.licence_name %></option> 
                 <% }); %> 
                   
                 </select>
             </div>
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">Nombre del producto:</label>
-                <input class="create__form__input" type="text" name="" id="" placeholder="nombre del producto" value="<%= item.product_name %>">
+                <input class="create__form__input" type="text" name="product_name" id="" placeholder="nombre del producto" value="<%= item.product_name %>">
             </div>
             <div>
-                <textarea class="create__form__textarea" placeholder="Descripción del producto" ><%= item.product_description %></textarea>
+                <textarea class="create__form__textarea" name="description" placeholder="Descripción del producto" ><%= item.product_description %></textarea>
             </div>
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">SKU:</label>
-                <input class="create__form__input" type="text" name="" id="" placeholder="codigo SKU" value="<%= item.sku %>">
+                <input class="create__form__input" type="text" name="sku" id="" placeholder="codigo SKU" value="<%= item.sku %>">
                 <label class="create__form__sub-title" for="">Precio:</label>
-                <input class="create__form__input" type="text" name="" id="" placeholder="Precio del Porducto" value="<%= item.price %>">
+                <input class="create__form__input" type="text" name="price" id="" placeholder="Precio del Porducto" value="<%= item.price %>">
                 <label class="create__form__sub-title" for="">Stock:</label>
-                <input class="create__form__input" type="number" min="1" value="<%= item.stock %>">
+                <input class="create__form__input" type="number" min="1" name="stock" value="<%= item.stock %>">
             </div>
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">Descuento:</label>
-                <input class="create__form__input" type="number" min="0" max="100" placeholder="0%" value="<%= item.discount%>">
+                <input class="create__form__input" type="number" min="0" max="100" placeholder="0%" name="discount" value="<%= item.discount%>">
                 <label class="create__form__sub-title" for="">Cuotas:</label>
-                <select class="create__form__select" name="" id="" aria-placeholder="3 Cuotas sin interés">
-                    <option value="opcion1">0</option>
-                    <option value="opcion1">3</option>
-                    <option value="opcion1">6</option>
-                    <option value="opcion1">9</option>
-                    <option value="opcion1">12</option>
+                <select class="create__form__select" name="dues" id="" aria-placeholder="3 Cuotas sin interés">
+                    <option value="0">Sin Cuotas</option>
+                    <option value="3">3 cuotas</option>
+                    <option value="6">6 cuotas</option>
+                    <option value="9">9 cuotas</option>
+                    <option value="12">12 cuotas</option>
                 </select>
             </div>
             <div class="create__form__container">
                 <label class="create__form__sub-title" for="">Imágenes:</label>
-                <input class="create__form__select-img" name="Elegir archivos" type="file">
+                <input class="create__form__select-img" name="imagenes" type="file" multiple>
             </div>
             <div class="edit__form__container-img">
                 <div>

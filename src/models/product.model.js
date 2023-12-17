@@ -30,6 +30,35 @@ const create = async (params) =>{
     }
 
 }
+const editItem = async (params, itemId) => {
+    try {
+              
+        const [product] = await sequelize.query(
+            'UPDATE product SET product_name=?, product_description=?, price=?, stock=?, discount=?, sku=?, dues=?, image_front=?, image_back=?, licence_id=?, category_id=? WHERE product_id=?',
+            {
+                replacements: [
+                    params.product_name,
+                    params.product_description,
+                    params.price,
+                    params.stock,
+                    params.discount,
+                    params.sku,
+                    params.dues,
+                    params.image_front,
+                    params.image_back,
+                    params.licence_id,
+                    params.category_id,
+                    itemId
+                ],
+                type: sequelize.QueryTypes.UPDATE
+        });
+        return product
+    } catch (error) {
+        return error
+        
+    }
+
+}
 
 const deleteItem = async (params) =>{
     try {
@@ -54,6 +83,7 @@ export {
     getOne,
     create,
     deleteItem,
+    editItem,
 
 }
 

@@ -10,7 +10,7 @@ adminRouter.get("/admin",adminController.admin );
 adminRouter.get("/create", adminController.createGet);
 adminRouter.post("/create", upload.array('imagenes', 2 ) , adminController.createPost);
 adminRouter.get("/edit/:id", adminController.editGet );
-adminRouter.put("/edit/:id", adminController.editPut );
+adminRouter.put("/edit/:id", upload.array('imagenes', 2 ) , adminController.editPut );
 adminRouter.delete("/delete/:id", adminController.delete );
 
 export  {
