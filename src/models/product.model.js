@@ -31,10 +31,29 @@ const create = async (params) =>{
 
 }
 
+const deleteItem = async (params) =>{
+    try {
+        console.log('Parámetros recibidos:', params)
+        const deleteProduct = await sequelize.query( 'DELETE FROM product WHERE product_id = ?', {
+            replacements: [params.product_id], 
+            type: sequelize.QueryTypes.DELETE
+        });
+        return deleteProduct
+    } catch (error) {
+        console.error('Error al eliminar el producto:', error);
+        throw error;
+        
+    }
+
+}
+
+
+
 export {
     getAll,
     getOne,
     create,
+    deleteItem,
 
 }
 

@@ -20,7 +20,6 @@
                     <p class="admin__add__text" >AGREGAR</p>
                     <a href="/admin/create">
                         <button class="admin__add__button">+</button>
-
                     </a>
                 </div>
 
@@ -46,7 +45,12 @@
                         <img class="img__mini" src="<%= item.image_front %>" alt="">
                         <img class="img__mini" src="<%= item.image_back %>" alt="">
                         <a href="/admin/edit/<%= item.product_id %>"> <img class="edit_pencil" src="/img/icons/edit_pencil.svg" alt=""></a>
-                        <img class="delete_trash" src="/img/icons/delete_trash.svg" alt="">
+                        <form  action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded">
+                            <button type="submit">
+                                <img class="delete_trash" src="/img/icons/delete_trash.svg" alt="">
+                            </button>
+
+                        </form>
                     </div>
                 <% }); %>
 

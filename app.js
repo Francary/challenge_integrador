@@ -4,6 +4,7 @@ import {mainRouter}  from "./src/routes/main.routes.js";
 import {shopRouter}  from "./src/routes/shop.routes.js";
 import {adminRouter} from "./src/routes/admin.routes.js";
 import {authRouter}  from "./src/routes/auth.routes.js";
+import methodOverride from "method-override";
 
 
 const app = express();
@@ -16,7 +17,7 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(methodOverride('_method'));
 
 app.use('/', mainRouter);
 app.use('/shop', shopRouter);

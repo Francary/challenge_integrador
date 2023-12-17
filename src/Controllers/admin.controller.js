@@ -1,6 +1,6 @@
 import { getAllCategory } from "../models/category.model.js";
 import { getAllLicence } from "../models/licence.model.js";
-import { getAll, getOne , create } from "../models/product.model.js";  
+import { getAll, getOne , create, deleteItem } from "../models/product.model.js";  
 
 const adminController ={
     admin: async  ( req, res ) => { 
@@ -51,7 +51,11 @@ const adminController ={
 
     editPut:        ( req, res ) => res.send(" Route for Admin Edit ID PUT View"),
     
-    delete:         ( req, res ) => res.send(" Route for Admin View"),
+    delete: async   ( req, res ) =>{
+        const itemId = req.params.id
+        await deleteItem({ product_id: itemId})
+        res.redirect('/admin/admin')
+    }
 };
 
 export  {adminController}
