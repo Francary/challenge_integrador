@@ -67,9 +67,7 @@ const adminController ={
             image_front:  verificarImagenes ? `/img/products/${req.files[0].filename}` : item.image_front ,
             image_back: verificarImagenes ? `/img/products/${req.files[1].filename}` : item.image_back,
             licence_id: Number(req.body.licence),
-            category_id: Number(req.body.category),
-            
-            
+            category_id: Number(req.body.category), 
         }
        
         const result =  await editItem(product_shema, itemId)
