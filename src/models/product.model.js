@@ -7,9 +7,6 @@ const getAll = async () => {
 
 }
 
-
-
-
 const getOne = async (id) => {
     // const [dbdata] = await sequelize.query('SELECT * FROM product WHERE product_id=?', {
     const [dbdata] = await sequelize.query('SELECT product.* , category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id WHERE product_id=? ;', {
@@ -20,9 +17,24 @@ const getOne = async (id) => {
     return dbdata;
 }
 
+const create = async (params) =>{
+    try {
+        const [product] = await sequelize.query('INSERT INTO product ( product_name , product_description, price, stock, discount, sku, dues,image_front, image_back, licence_id, category_id ) VALUES ?', {
+            replacements: [params], 
+            type: sequelize.QueryTypes.INSERT
+        });
+        return product
+    } catch (error) {
+        return error
+        
+    }
+
+}
+
 export {
     getAll,
     getOne,
+    create,
 
 }
 

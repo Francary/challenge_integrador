@@ -1,6 +1,6 @@
 import { getAllCategory } from "../models/category.model.js";
 import { getAllLicence } from "../models/licence.model.js";
-import { getAll, getOne } from "../models/product.model.js";  
+import { getAll, getOne , create } from "../models/product.model.js";  
 
 const adminController ={
     admin: async  ( req, res ) => { 
@@ -16,11 +16,27 @@ const adminController ={
     },
     
 
-    createPost:     ( req, res ) =>{
-
+    createPost:  async    ( req, res ) =>{
         
-        res.send(" Route for Admin Create POST View")
+        const product_shema = {
+            
+            product_name: req.body.product_name.toUpperCase(),
+            product_description: req.body.description,
+            price: Number(req.body.price),
+            stock: Number(req.body.stock),
+            discount: Number(req.body.discount),
+            sku: req.body.sku,
+            dues: Number(req.body.dues),
+            image_front:  `/img/products/${req.files[0].filename}`,
+            image_back: `/img/products/${req.files[1].filename}`,
+            licence_id: Number(req.body.licence),
+            category_id: Number(req.body.category),
+            
+            
+        }
 
+        const result = await create([Object.values(product_shema)])
+        res.redirect('/admin/admin')
 
     }, 
      
