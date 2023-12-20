@@ -22,5 +22,4 @@ adminRouter.delete("/delete/:id", adminController.delete );
 
 export  {
     adminRouter,
-
 }

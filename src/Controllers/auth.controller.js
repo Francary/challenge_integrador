@@ -28,7 +28,11 @@ const authController = {
 
     registerGet:    ( req, res ) => res.render("./auth/register"),
     registerPost:   ( req, res ) => res.send(" Route for Register POST View"),
-    logout:         ( req, res ) => res.send(" Route for Logout View"),
+    logout:         ( req, res ) => {
+        req.session.isLogged = false
+        return res.redirect('/home')
+    },
+    
 }
 
 export {authController}
