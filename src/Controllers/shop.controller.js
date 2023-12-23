@@ -1,5 +1,7 @@
 import fs from 'fs/promises'; // Módulo de manejo de archivos para Node.js
 import { getAll, getOne } from '../models/product.model.js';
+import { getAllCategory } from '../models/category.model.js';
+import { getAllLicence } from '../models/licence.model.js';
 
 const shopController = {
     shop:    async   ( req, res ) =>{
@@ -10,8 +12,10 @@ const shopController = {
         //   const data = JSON.parse(jsonContent);
 
         const data = await getAll()
+        const category = await getAllCategory()
+        const licence = await getAllLicence()
          
-        res.render('./shop/shop', { data });
+        res.render('./shop/shop', { data , category,licence });
 
     } ,
         

@@ -12,11 +12,24 @@
 			<aside class="aside__container">
 				<div>
 					<p class="filter__title">BUSCAR</p>
-					<input class="filter__input__search" type="search" name="BUSCADOR" id="" placeholder="item o categoria">
+					<select class="filter__input__search" type="search" name="BUSCADOR" id="" placeholder="item o categoria">
+						<% category.forEach( cate => {%>
+							<option value="<%= cate.category_id %>"><%= cate.category_name %></option> 
+						<% }); %> 
+						<% licence.forEach( lice => {%>
+							<option value="<%= lice.licence_id %>" ><%= lice.licence_name %></option> 
+						<% }); %> 
+					</select>	
 				</div>
 				<div>
 					<p class="filter__title">ORDENAR POR</p>
-					<select class="filter__input__select" name="" id="" placeholder="Mayor a menor"></select>
+					<select class="filter__input__select" name="" id="" placeholder="Mayor a menor">
+						<option> A - Z</option>
+						<option> Z - A</option>
+						<option> Menor Precio</option>
+						<option> Mayor Precio</option>
+
+					</select>
 				</div>     
 				<div>
 					<p class="filter__title">PRECIO</p>
